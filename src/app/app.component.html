@@ -1,4 +1,4 @@
-<div class="container container-dark">
+<div class="container">
   <br />
   <span><H1>FORECAST</H1></span>
 
@@ -20,11 +20,15 @@
         class="form-control"
         id="inputCityName"
         placeholder="City name"
+        [formControl]="name"
       />
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-3">Find</button>
+      <a class="btn btn-primary" href="#" role="button" (click)="FindCity()"
+        >Find</a
+      >
     </div>
+    <div>&nbsp;</div>
     <div>
       <div class="form-check form-check-inline">
         <input
@@ -33,7 +37,7 @@
           name="flexRadioDefault"
           id="flexRadioHourly"
           [checked]="modeToggle === 0"
-          (click)="changeToggle()"
+          (change)="changeToggle()"
         />
         <label class="form-check-label" for="flexRadioHourly"> Hourly </label>
       </div>
@@ -44,12 +48,12 @@
           name="flexRadioDefault"
           id="flexRadioDaily"
           [checked]="modeToggle === 1"
-          (click)="changeToggle()"
+          (change)="changeToggle()"
         />
         <label class="form-check-label" for="flexRadioDaily"> Daily </label>
       </div>
     </div>
-    <!-- modeToggle: {{ modeToggle }} -->
+    <!-- <p>Value: {{ name.value }}</p> -->
   </form>
 </div>
 

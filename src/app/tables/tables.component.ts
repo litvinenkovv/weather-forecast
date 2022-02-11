@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IDaily, IHourly } from '../shared/interfaces';
+import { IDaily, IHourly } from '../shared/table.interface';
 
 @Component({
   selector: 'app-tables',
