@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
 
   title = 'Forecast';
   name = new FormControl('');
-  API_KEY: string = '9535b10c858644b6a8d329b46a76ed98';
   currentDate = new Date();
   sevenDays: ISevenDays[] = [];
   eightHours: IEightHours[] = [];
