@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  openweathermap_org_KEY: '9535b10c858644b6a8d329b46a76ed98',
+  openweathermap_org_KEY: '',
 };
 
 /*
