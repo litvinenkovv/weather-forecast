@@ -7,26 +7,29 @@
     <tbody>
       <tr>
         <th>City Name</th>
-        <th>03:00</th>
+        <th *ngFor="let hourName of eightHours; let i = index">
+          {{ hourName.name }}
+        </th>
+        <!-- <th>03:00</th>
         <th>06:00</th>
         <th>09:00</th>
         <th>12:00</th>
         <th>15:00</th>
         <th>18:00</th>
         <th>21:00</th>
-        <th>24:00</th>
+        <th>24:00</th> -->
       </tr>
 
       <tr *ngFor="let hourlyLine of hourlyTable; let i = index">
         <td>{{ hourlyLine.city }}</td>
-        <td>{{ hourlyLine.time_0300 | number: "1.0-0" }} &deg;</td>
-        <td>{{ hourlyLine.time_0600 | number: "1.0-0" }} &deg;</td>
-        <td>{{ hourlyLine.time_0900 | number: "1.0-0" }} &deg;</td>
-        <td>{{ hourlyLine.time_1200 | number: "1.0-0" }} &deg;</td>
-        <td>{{ hourlyLine.time_1500 | number: "1.0-0" }} &deg;</td>
-        <td>{{ hourlyLine.time_1800 | number: "1.0-0" }} &deg;</td>
-        <td>{{ hourlyLine.time_2100 | number: "1.0-0" }} &deg;</td>
-        <td>{{ hourlyLine.time_2400 | number: "1.0-0" }} &deg;</td>
+        <td>{{ hourlyLine.time_0 | number: "1.0-0" }} &deg;</td>
+        <td>{{ hourlyLine.time_3 | number: "1.0-0" }} &deg;</td>
+        <td>{{ hourlyLine.time_6 | number: "1.0-0" }} &deg;</td>
+        <td>{{ hourlyLine.time_9 | number: "1.0-0" }} &deg;</td>
+        <td>{{ hourlyLine.time_12 | number: "1.0-0" }} &deg;</td>
+        <td>{{ hourlyLine.time_15 | number: "1.0-0" }} &deg;</td>
+        <td>{{ hourlyLine.time_18 | number: "1.0-0" }} &deg;</td>
+        <td>{{ hourlyLine.time_21 | number: "1.0-0" }} &deg;</td>
       </tr>
     </tbody>
   </table>
@@ -38,23 +41,26 @@
     <tbody>
       <tr>
         <th>City Name</th>
-        <th>Mo</th>
-        <th>Tu</th>
+
+        <th *ngFor="let dayName of sevenDays; let i = index">
+          {{ dayName.name }}
+        </th>
+        <!-- <th>Tu</th>
         <th>We</th>
         <th>Th</th>
         <th>Fr</th>
         <th>Sa</th>
-        <th>Su</th>
+        <th>Su</th> -->
       </tr>
       <tr *ngFor="let dailyLine of dailyTable; let i = index">
         <td>{{ dailyLine.city }}</td>
-        <td>{{ dailyLine.temp_Mo | number: "1.0-0" }} &deg;</td>
-        <td>{{ dailyLine.temp_Tu | number: "1.0-0" }} &deg;</td>
-        <td>{{ dailyLine.temp_We | number: "1.0-0" }} &deg;</td>
-        <td>{{ dailyLine.temp_Th | number: "1.0-0" }} &deg;</td>
-        <td>{{ dailyLine.temp_Fr | number: "1.0-0" }} &deg;</td>
-        <td>{{ dailyLine.temp_Sa | number: "1.0-0" }} &deg;</td>
-        <td>{{ dailyLine.temp_Su | number: "1.0-0" }} &deg;</td>
+        <td>{{ dailyLine.temp_0 | number: "1.0-0" }} &deg;</td>
+        <td>{{ dailyLine.temp_1 | number: "1.0-0" }} &deg;</td>
+        <td>{{ dailyLine.temp_2 | number: "1.0-0" }} &deg;</td>
+        <td>{{ dailyLine.temp_3 | number: "1.0-0" }} &deg;</td>
+        <td>{{ dailyLine.temp_4 | number: "1.0-0" }} &deg;</td>
+        <td>{{ dailyLine.temp_5 | number: "1.0-0" }} &deg;</td>
+        <td>{{ dailyLine.temp_6 | number: "1.0-0" }} &deg;</td>
       </tr>
     </tbody>
   </table>

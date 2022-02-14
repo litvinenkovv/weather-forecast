@@ -3,14 +3,14 @@ export interface IHourly {
   coordinates: string;
   lat: number;
   lon: number;
-  time_0300: number;
-  time_0600: number;
-  time_0900: number;
-  time_1200: number;
-  time_1500: number;
-  time_1800: number;
-  time_2100: number;
-  time_2400: number;
+  time_0: number;
+  time_3: number;
+  time_6: number;
+  time_9: number;
+  time_12: number;
+  time_15: number;
+  time_18: number;
+  time_21: number;
 }
 
 export interface IDaily {
@@ -18,13 +18,13 @@ export interface IDaily {
   coordinates: string;
   lat: number;
   lon: number;
-  temp_Mo: number;
-  temp_Tu: number;
-  temp_We: number;
-  temp_Th: number;
-  temp_Fr: number;
-  temp_Sa: number;
-  temp_Su: number;
+  temp_0: number;
+  temp_1: number;
+  temp_2: number;
+  temp_3: number;
+  temp_4: number;
+  temp_5: number;
+  temp_6: number;
 }
 
 export interface ICity {
@@ -61,4 +61,14 @@ export interface IDailyTemp {
       };
     }
   ];
+}
+
+export interface ISevenDays {
+  date: Date;
+  name: string;
+}
+
+export interface IEightHours {
+  time: string;
+  name: string;
 }

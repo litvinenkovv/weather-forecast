@@ -1,6 +1,6 @@
 <div class="container">
   <br />
-  <span><H1>FORECAST</H1></span>
+  <span><H1>WEATHER FORECAST</H1></span>
 
   <form class="row">
     <div class="col-auto">
@@ -26,6 +26,15 @@
     <div class="col-auto">
       <a class="btn btn-primary" href="#" role="button" (click)="FindCity()"
         >Find</a
+      >
+    </div>
+    <div class="col-auto" hidden>
+      <a
+        class="btn btn-primary"
+        href="#"
+        role="button"
+        (click)="CalculateTime()"
+        >Time</a
       >
     </div>
     <div>&nbsp;</div>
@@ -61,6 +70,8 @@
   [hourlyTable]="hourlyTable"
   [dailyTable]="dailyTable"
   [modeToggle]="modeToggle"
+  [sevenDays]="sevenDays"
+  [eightHours]="eightHours"
 ></app-tables>
 
 <router-outlet></router-outlet>
