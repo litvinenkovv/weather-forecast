@@ -10,14 +10,6 @@
         <th *ngFor="let hourName of eightHours; let i = index">
           {{ hourName.name }}
         </th>
-        <!-- <th>03:00</th>
-        <th>06:00</th>
-        <th>09:00</th>
-        <th>12:00</th>
-        <th>15:00</th>
-        <th>18:00</th>
-        <th>21:00</th>
-        <th>24:00</th> -->
       </tr>
 
       <tr *ngFor="let hourlyLine of hourlyTable; let i = index">
@@ -45,12 +37,6 @@
         <th *ngFor="let dayName of sevenDays; let i = index">
           {{ dayName.name }}
         </th>
-        <!-- <th>Tu</th>
-        <th>We</th>
-        <th>Th</th>
-        <th>Fr</th>
-        <th>Sa</th>
-        <th>Su</th> -->
       </tr>
       <tr *ngFor="let dailyLine of dailyTable; let i = index">
         <td>{{ dailyLine.city }}</td>
