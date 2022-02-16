@@ -29,6 +29,9 @@
         >Find</a
       >
     </div>
+    <!-- <button type="button" class="btn btn-primary" id="liveToastBtn">
+      Show live toast
+    </button> -->
     <div class="col-auto" hidden>
       <a
         class="btn btn-primary"
@@ -64,6 +67,29 @@
       </div>
     </div>
   </form>
+</div>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+  <div
+    id="liveToast"
+    class="toast"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <div class="toast-header text-white bg-primary border-0">
+      <img src="..." class="rounded me-2" alt="" />
+      <strong class="me-auto">WEATHER FORECAST</strong>
+      <small>error</small>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="toast-body">City not found!</div>
+  </div>
 </div>
 
 <app-tables

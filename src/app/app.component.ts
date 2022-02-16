@@ -10,6 +10,8 @@ import {
 } from './shared/table.interface';
 import { FormControl } from '@angular/forms';
 import { HttpService } from './shared/http.service';
+import * as bootstrap from 'bootstrap';
+// import { bootstrap } from '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 @Component({
   selector: 'app-root',
@@ -78,7 +80,8 @@ export class AppComponent implements OnInit {
             this.fillTempDailyByLine(this.dailyTable[currentIndex]);
           }
         } else {
-          alert('City [ ' + this.name.value + ' ] not found!');
+          // alert('City [ ' + this.name.value + ' ] not found!');
+          this.showToast(this.name.value);
         }
         this.name.setValue('');
       });
@@ -258,5 +261,19 @@ export class AppComponent implements OnInit {
 
       dateNow.setDate(dateNow.getDate() + 1);
     }
+  }
+
+  // if (toastTrigger) {
+  //   toastTrigger.addEventListener('click', function () {
+  //     let toast = new bootstrap.Toast(toastLiveExample);
+
+  //     toast.show();
+  //   });
+  // }
+
+  showToast(cityName: string = '') {
+    let toastLiveExample: any = document.getElementById('liveToast');
+    let toast = new bootstrap.Toast(toastLiveExample);
+    toast.show();
   }
 }
