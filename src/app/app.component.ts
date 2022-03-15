@@ -43,6 +43,10 @@ export class AppComponent implements OnInit {
     this.modeToggle = this.modeToggle === 1 ? 0 : 1;
   }
 
+  onSubmit() {
+    this.FindCity();
+  }
+
   FindCity() {
     let currentIndex: number = 0;
 

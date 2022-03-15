@@ -3,31 +3,30 @@
   <br />
   <span><H1>WEATHER FORECAST</H1></span>
   <br />
-  <form class="row">
-    <div class="col-auto">
-      <label for="staticCityText" class="visually-hidden">City</label>
-      <input
-        type="text"
-        readonly
-        class="form-control-plaintext"
-        id="staticCityText"
-        value="City"
-      />
-    </div>
-    <div class="col-auto">
-      <label for="inputCityName" class="visually-hidden">Text</label>
-      <input
-        type="text"
-        class="form-control"
-        id="inputCityName"
-        placeholder="City name"
-        [formControl]="name"
-      />
-    </div>
-    <div class="col-auto">
-      <a class="btn btn-primary" href="#" role="button" (click)="FindCity()"
-        >Find</a
-      >
+  <form>
+    <div class="row g-3">
+      <div class="col-auto">
+        <label for="inputCityName">City</label>
+      </div>
+      <div class="col-auto">
+        <input
+          type="text"
+          class="formControl"
+          id="inputCityName"
+          placeholder="City name"
+          [formControl]="name"
+        />
+      </div>
+
+      <div class="col-auto">
+        <button
+          type="button"
+          class="btn btn-primary col-auto"
+          (click)="FindCity()"
+        >
+          Find
+        </button>
+      </div>
     </div>
     <!-- <button type="button" class="btn btn-primary" id="liveToastBtn">
       Show live toast
